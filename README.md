@@ -1,1 +1,1 @@
-# click [here](http://alvinlearn.top/ie-cause-resize-control-ui-with-editable-element/) to see
+# 点击 [here](http://alvinlearn.top/ie-cause-resize-control-ui-with-editable-element/) 在 IE 11 下查看。
