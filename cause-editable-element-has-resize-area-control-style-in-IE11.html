@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            background: white;
+        }
+        h2 {
+            text-align: center;
+            color: red;
+        }
+        .text-block {
+			float: left;
+            width: 400px;
+            height: 150px;
+            margin: 15px;
+            padding: 5px 10px;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+        }
+        pre {
+            color: blue;
+        }
+    </style>
+    <title>ie-cause-resize-control-ui-with-editable-element</title>
+</head>
+
+<body>
+
+    <h2>
+        在IE11下，如下的写法都导致了大小控制UI的出现
+    </h2>
+
+    <div contentEditable="true" class="text-block">
+        <div contentEditable="true">
+            <p>click to see resize control area</p>
+			<pre>
+&lt;div contentEditable=&quot;true&quot;&gt;
+    &lt;div contentEditable=&quot;true&quot;&gt;
+        &lt;p&gt;click to see resize control area&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>	
+        </div>
+    </div>
+	
+    <div contentEditable="true" class="text-block">
+        <div contentEditable="false">
+            <p>click to see resize control area</p>
+            <pre>
+&lt;div contentEditable=&quot;true&quot;&gt;
+    &lt;div contentEditable=&quot;false&quot;&gt;
+        &lt;p&gt;click to see resize control area&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+        </div>
+    </div>
+
+    <div contentEditable="true" class="text-block">
+        <div style="display:table-cell">
+            <p>click to see resize control area</p>
+            <pre>
+&lt;div contentEditable=&quot;true&quot;&gt;
+    &lt;div style=&quot;display:table-cell&quot;&gt;
+        &lt;p&gt;click to see resize control area&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+        </div>
+    </div>
+
+    <div contentEditable="true" class="text-block">
+        <p style="display: table;">click to see <br> resize control area</p>
+        <pre>
+&lt;div contentEditable=&quot;true&quot;&gt;
+    &lt;p style=&quot;display: table;&quot;&gt;
+        click to see &lt;br&gt; resize control area
+    &lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+    </div>
+
+    <div contentEditable="true" class="text-block">
+        <p style="display: inline-block;">click to see resize control area</p>
+        <pre>
+&lt;div contentEditable=&quot;true&quot;&gt;
+    &lt;p style=&quot;display: inline-block;&quot;&gt;
+        click to see resize control area
+    &lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+    </div>
+
+    <div contentEditable="true" class="text-block">
+        <p style="position: absolute; ">click to see resize control area</p>
+        <pre style="margin-top: 50px;">
+&lt;div contentEditable=&quot;true&quot;&gt;
+    &lt;p style=&quot;position: absolute;&quot;&gt;
+        click to see resize control area
+    &lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+    </div>
+    
+    <div contentEditable="true" class="text-block" >
+        <p style="max-width: 100%">click to see resize control area</p>
+        <pre>
+&lt;div contentEditable=&quot;true&quot; &gt;
+    &lt;p style=&quot;max-width: 100%&quot;&gt;
+        click to see resize control area
+    &lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+    </div>
+    
+    <div contentEditable="true" class="text-block" >
+        <p style="max-height: 100%">click to see resize control area</p>
+        <pre>
+&lt;div contentEditable=&quot;true&quot; &gt;
+    &lt;p style=&quot;max-height: 100%&quot;&gt;
+        click to see resize control area
+    &lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+    </div>
+
+    <div contentEditable="true" class="text-block" >
+        <p style="height: 50px;">click to see resize control area</p>
+        <pre>
+&lt;div contentEditable=&quot;true&quot; &gt;
+    &lt;p style=&quot;height: 50px;&quot;&gt;
+        click to see resize control area
+    &lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+    </div>
+
+    <div contentEditable="true" class="text-block" >
+        <p style="width: 200px;">click to see resize control area</p>
+        <pre>
+&lt;div contentEditable=&quot;true&quot; &gt;
+    &lt;p style=&quot;width: 200px;&quot;&gt;
+        click to see resize control area
+    &lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+    </div>
+</body>
+
+</html>
